@@ -1,0 +1,131 @@
+/* Responsive Design */
+
+/* Tablets */
+@media (max-width: 768px) {
+    header {
+        padding: 0 20px; /* Reducimos el padding en tablets */
+    }
+    
+    .logo {
+        margin-left: 0;
+    }
+    
+    .nav-links {
+        margin-right: 0;
+    }
+    
+    .nav-links {
+        gap: 15px;
+    }
+    
+    .nav-links a {
+        font-size: 0.9rem;
+    }
+    
+    .hero {
+        padding: 130px 0 60px;
+    }
+    
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero h2 {
+        font-size: 1.5rem;
+    }
+    
+    .sobre-mi .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .profile-image {
+        flex: 0 0 250px;
+        height: 250px;
+        margin: 0 auto 30px;
+    }
+    
+    .skill-item {
+        flex: 0 0 250px;
+    }
+    
+    .proyectos-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .copy-examples {
+        grid-template-columns: 1fr;
+    }
+    
+    .contacto-links {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .contacto-link {
+        width: 200px;
+        justify-content: center;
+    }
+}
+
+/* Móviles */
+@media (max-width: 480px) {
+    header {
+        padding: 0 15px; /* Reducimos el padding en móviles */
+    }
+    
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .hero {
+        padding: 120px 0 50px;
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .hero h2 {
+        font-size: 1.3rem;
+    }
+    
+    .hero p {
+        font-size: 1rem;
+    }
+    
+    h2 {
+        font-size: 1.7rem;
+    }
+    
+    .profile-image {
+        flex: 0 0 200px;
+        height: 200px;
+    }
+    
+    .skill-item {
+        flex: 0 0 220px;
+    }
+    
+    .proyecto-header {
+        padding: 15px;
+    }
+    
+    .proyecto-header h3 {
+        font-size: 1.1rem;
+    }
+    
+    .proyecto-content {
+        padding: 15px;
+    }
+    
+    .copy-example {
+        padding: 15px;
+    }
+}
