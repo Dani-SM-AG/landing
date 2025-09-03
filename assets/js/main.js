@@ -49,4 +49,47 @@ document.addEventListener('DOMContentLoaded', function() {
         el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
         observer.observe(el);
     });
+    
+    // Funcionalidad para el popup de mockups
+    const popup = document.getElementById('mockup-popup');
+    const mockupImage = popup.querySelector('.mockup-image');
+    const closeBtn = popup.querySelector('.close-popup');
+    
+    // Función para abrir el popup
+    function openPopup(imageSrc) {
+        mockupImage.src = imageSrc;
+        popup.style.display = 'block';
+        document.body.style.overflow = 'hidden'; // Evitar scroll en el fondo
+    }
+    
+    // Función para cerrar el popup
+    function closePopup() {
+        popup.style.display = 'none';
+        document.body.style.overflow = 'auto'; // Restaurar scroll
+    }
+    
+    // Eventos para los botones "Ver más"
+    document.querySelectorAll('.proyecto-link-btn').forEach(button => {
+        button.addEventListener('click', function() {
+            const imageSrc = this.getAttribute('data-mockup');
+            openPopup(imageSrc);
+        });
+    });
+    
+    // Evento para cerrar el popup con el botón de cerrar
+    closeBtn.addEventListener('click', closePopup);
+    
+    // Evento para cerrar el popup al hacer clic fuera de la imagen
+    window.addEventListener('click', function(event) {
+        if (event.target === popup) {
+            closePopup();
+        }
+    });
+    
+    // Evento para cerrar el popup con la tecla Escape
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape' && popup.style.display === 'block') {
+            closePopup();
+        }
+    });
 });

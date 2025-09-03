@@ -321,6 +321,11 @@ nav {
 
 .proyecto-header h3 {
     color: white;
+    margin: 0 0 5px 0;
+}
+
+.proyecto-header p {
+    color: rgba(255, 255, 255, 0.8);
     margin: 0;
 }
 
@@ -351,24 +356,26 @@ nav {
 .proyecto-footer {
     padding: 15px 20px;
     border-top: 1px solid rgba(0, 0, 0, 0.05);
-    text-align: right;
+    text-align: center;
 }
 
-.proyecto-link {
+.proyecto-link-btn {
+    display: inline-block;
+    background-color: var(--lavanda-suave);
     color: var(--azul-profundo);
+    padding: 10px 25px;
+    border: none;
+    border-radius: 25px;
     font-weight: 600;
-    display: inline-flex;
-    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
 }
 
-.proyecto-link:after {
-    content: '→';
-    margin-left: 5px;
-    transition: transform 0.3s ease;
-}
-
-.proyecto-link:hover:after {
-    transform: translateX(5px);
+.proyecto-link-btn:hover {
+    background-color: var(--azul-profundo);
+    color: white;
+    transform: translateY(-3px);
 }
 
 .portafolio-visual h3 {
@@ -397,6 +404,61 @@ nav {
 .copy-example p {
     font-style: italic;
     color: var(--negro-suave);
+}
+
+/* Popup para mockups */
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    overflow: auto;
+    animation: fadeIn 0.4s;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.popup-content {
+    position: relative;
+    margin: 5% auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 800px;
+    animation: slideIn 0.4s;
+}
+
+@keyframes slideIn {
+    from {transform: translateY(-50px); opacity: 0;}
+    to {transform: translateY(0); opacity: 1;}
+}
+
+.close-popup {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    color: white;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close-popup:hover {
+    color: var(--lavanda-suave);
+}
+
+.mockup-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 /* Contacto Section */

@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
             'hero-text': 'Creando conexiones significativas a través de contenido estratégico y gestión de redes sociales.',
             'hero-cta': 'Contactar',
             'sobre-mi-title': 'Sobre mí',
-            'sobre-mi-p1': 'Soy una profesional apasionada por la creación de contenido estratégico y la gestión de redes sociales. Mi enfoque se centra en desarrollar campañas que no solo generen engagement, sino que también construyan relaciones duraderas con la audiencia.',
+            'sobre-mi-p1': 'Me especializo en crear contenido que conecta con la audiencia desde la autenticidad y la intención. Actualmente trabajo como Social Media Assistant en una agencia de marketing digital, donde desarrollo estrategias de contenido, redacto copys, programo publicaciones y gestiono grillas semanales. Me adapto con facilidad a distintos estilos de marca y combino creatividad con enfoque estratégico. También tengo conocimientos en diseño de landing pages, que aplico en proyectos personales como este portafolio. Mi objetivo es seguir creciendo en estrategia y liderazgo de cuentas, siempre con una comunicación que inspire y genere resultados.',
             'sobre-mi-p2': 'Mi experiencia abarca desde la planificación de estrategias de contenido hasta la ejecución y análisis de resultados, siempre con el objetivo de impulsar el crecimiento de las marcas que represento.',
             'habilidades-title': 'Habilidades',
             'habilidad1-titulo': 'Publicidad Digital',
@@ -33,14 +33,16 @@ document.addEventListener('DOMContentLoaded', function() {
             'habilidad7-titulo': 'Desarrollo Web (básico)',
             'habilidad7-desc': 'Conocimientos en HTML, CSS y JavaScript',
             'proyectos-title': 'Proyectos Destacados',
-            'proyecto1-title': 'Comunicación empática para servicios de asistencia funeraria',
+            'proyecto1-nombre': 'Eterna FuneralHome',
+            'proyecto1-subnombre': 'Asistencia Funeraria',
             'proyecto1-objetivo': 'Objetivo: Diseñar una línea de contenido emocionalmente cuidadosa para una marca de asistencia funeraria con presencia internacional.',
             'proyecto1-estrategia': 'Estrategia aplicada:',
             'proyecto1-estrategia1': 'Redacción de copys sensibles y respetuosos',
             'proyecto1-estrategia2': 'Creación de grillas editoriales equilibradas',
             'proyecto1-estrategia3': 'Propuesta de enfoques temáticos y tono de voz',
             'proyecto1-vermas': 'Ver más',
-            'proyecto2-title': 'Inspirar confianza y aventura en servicios de asistencia en viajes',
+            'proyecto2-nombre': 'ViaSure',
+            'proyecto2-subnombre': 'Agencia de viajes',
             'proyecto2-objetivo': 'Objetivo: Crear contenido atractivo y confiable para una marca de asistencia en viajes.',
             'proyecto2-estrategia': 'Estrategia aplicada:',
             'proyecto2-estrategia1': 'Redacción de copys inspiradores sobre destinos',
@@ -60,7 +62,7 @@ document.addEventListener('DOMContentLoaded', function() {
             'email': 'Email',
             'instagram': 'Instagram',
             'linkedin': 'LinkedIn',
-            'footer': '© 2023 Daniela Ramírez. Todos los derechos reservados.'
+            'footer': '© 2025 Daniela Ramírez. Todos los derechos reservados.'
         },
         'en': {
             'title': 'Daniela Ramírez | Content Manager & Social Media Manager',
@@ -73,7 +75,7 @@ document.addEventListener('DOMContentLoaded', function() {
             'hero-text': 'Creating meaningful connections through strategic content and social media management.',
             'hero-cta': 'Contact',
             'sobre-mi-title': 'About me',
-            'sobre-mi-p1': 'I am a professional passionate about strategic content creation and social media management. My focus is on developing campaigns that not only generate engagement but also build lasting relationships with the audience.',
+            'sobre-mi-p1': 'I specialize in creating content that connects with the audience from authenticity and intention. I currently work as a Social Media Assistant in a digital marketing agency, where I develop content strategies, write copies, schedule publications and manage weekly grids. I easily adapt to different brand styles and combine creativity with strategic focus. I also have knowledge in landing page design, which I apply in personal projects like this portfolio. My goal is to continue growing in strategy and account leadership, always with communication that inspires and generates results.',
             'sobre-mi-p2': 'My experience ranges from planning content strategies to execution and analysis of results, always with the goal of driving the growth of the brands I represent.',
             'habilidades-title': 'Skills',
             'habilidad1-titulo': 'Digital Advertising',
@@ -91,14 +93,16 @@ document.addEventListener('DOMContentLoaded', function() {
             'habilidad7-titulo': 'Basic Web Development',
             'habilidad7-desc': 'Knowledge of HTML, CSS and JavaScript',
             'proyectos-title': 'Featured Projects',
-            'proyecto1-title': 'Empathetic communication for funeral assistance services',
+            'proyecto1-nombre': 'Eterna FuneralHome',
+            'proyecto1-subnombre': 'Funeral Assistance',
             'proyecto1-objetivo': 'Objective: To design an emotionally careful content line for an international funeral assistance brand.',
             'proyecto1-estrategia': 'Applied strategy:',
             'proyecto1-estrategia1': 'Writing sensitive and respectful copies',
             'proyecto1-estrategia2': 'Creation of balanced editorial grids',
             'proyecto1-estrategia3': 'Proposal of thematic approaches and tone of voice',
             'proyecto1-vermas': 'See more',
-            'proyecto2-title': 'Inspiring confidence and adventure in travel assistance services',
+            'proyecto2-nombre': 'ViaSure',
+            'proyecto2-subnombre': 'Travel Agency',
             'proyecto2-objetivo': 'Objective: To create attractive and reliable content for a travel assistance brand.',
             'proyecto2-estrategia': 'Applied strategy:',
             'proyecto2-estrategia1': 'Writing inspiring copies about destinations',
@@ -118,7 +122,7 @@ document.addEventListener('DOMContentLoaded', function() {
             'email': 'Email',
             'instagram': 'Instagram',
             'linkedin': 'LinkedIn',
-            'footer': '© 2023 Daniela Ramírez. All rights reserved.'
+            'footer': '© 2025 Daniela Ramírez. All rights reserved.'
         }
     };
     
@@ -183,25 +187,27 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Proyecto 1
         const proyecto1 = document.querySelector('.proyecto-card:nth-child(1)');
-        proyecto1.querySelector('.proyecto-header h3').textContent = translations[lang]['proyecto1-title'];
+        proyecto1.querySelector('.proyecto-header h3').textContent = translations[lang]['proyecto1-nombre'];
+        proyecto1.querySelector('.proyecto-header p').textContent = translations[lang]['proyecto1-subnombre'];
         proyecto1.querySelector('.proyecto-content p strong').textContent = translations[lang]['proyecto1-objetivo'];
         proyecto1.querySelector('.proyecto-content p:nth-child(2) strong').textContent = translations[lang]['proyecto1-estrategia'];
         const proyecto1Items = proyecto1.querySelectorAll('.proyecto-content ul li');
         proyecto1Items[0].textContent = translations[lang]['proyecto1-estrategia1'];
         proyecto1Items[1].textContent = translations[lang]['proyecto1-estrategia2'];
         proyecto1Items[2].textContent = translations[lang]['proyecto1-estrategia3'];
-        proyecto1.querySelector('.proyecto-link').textContent = translations[lang]['proyecto1-vermas'];
+        proyecto1.querySelector('.proyecto-link-btn').textContent = translations[lang]['proyecto1-vermas'];
         
         // Proyecto 2
         const proyecto2 = document.querySelector('.proyecto-card:nth-child(2)');
-        proyecto2.querySelector('.proyecto-header h3').textContent = translations[lang]['proyecto2-title'];
+        proyecto2.querySelector('.proyecto-header h3').textContent = translations[lang]['proyecto2-nombre'];
+        proyecto2.querySelector('.proyecto-header p').textContent = translations[lang]['proyecto2-subnombre'];
         proyecto2.querySelector('.proyecto-content p strong').textContent = translations[lang]['proyecto2-objetivo'];
         proyecto2.querySelector('.proyecto-content p:nth-child(2) strong').textContent = translations[lang]['proyecto2-estrategia'];
         const proyecto2Items = proyecto2.querySelectorAll('.proyecto-content ul li');
         proyecto2Items[0].textContent = translations[lang]['proyecto2-estrategia1'];
         proyecto2Items[1].textContent = translations[lang]['proyecto2-estrategia2'];
         proyecto2Items[2].textContent = translations[lang]['proyecto2-estrategia3'];
-        proyecto2.querySelector('.proyecto-link').textContent = translations[lang]['proyecto2-vermas'];
+        proyecto2.querySelector('.proyecto-link-btn').textContent = translations[lang]['proyecto2-vermas'];
         
         // Actualizar portafolio visual
         document.querySelector('.portafolio-visual h3').textContent = translations[lang]['portafolio-title'];
@@ -219,8 +225,8 @@ document.addEventListener('DOMContentLoaded', function() {
         document.querySelector('#contacto .contacto-info p').textContent = translations[lang]['contacto-text'];
         
         const contactLinks = document.querySelectorAll('.contacto-link');
-        contactLinks[0].querySelector('span').textContent = translations[lang]['email'];
-        contactLinks[1].querySelector('span').textContent = translations[lang]['whatsapp'];
+        contactLinks[0].querySelector('span').textContent = translations[lang]['whatsapp'];
+        contactLinks[1].querySelector('span').textContent = translations[lang]['email'];
         contactLinks[2].querySelector('span').textContent = translations[lang]['instagram'];
         contactLinks[3].querySelector('span').textContent = translations[lang]['linkedin'];
         
