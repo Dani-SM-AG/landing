@@ -24,6 +24,63 @@ document.addEventListener('DOMContentLoaded', function() {
         skillsTrack.innerHTML += skillsItems;
     }
     
+    // Funcionalidad de arrastre para el slider de habilidades
+    const skillsSlider = document.querySelector('.skills-slider');
+    if (skillsSlider) {
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+        
+        // Eventos para mouse
+        skillsSlider.addEventListener('mousedown', (e) => {
+            isDown = true;
+            skillsSlider.classList.add('dragging');
+            startX = e.pageX - skillsSlider.offsetLeft;
+            scrollLeft = skillsSlider.scrollLeft;
+            e.preventDefault();
+        });
+        
+        skillsSlider.addEventListener('mouseleave', () => {
+            isDown = false;
+            skillsSlider.classList.remove('dragging');
+        });
+        
+        skillsSlider.addEventListener('mouseup', () => {
+            isDown = false;
+            skillsSlider.classList.remove('dragging');
+        });
+        
+        skillsSlider.addEventListener('mousemove', (e) => {
+            if (!isDown) return;
+            e.preventDefault();
+            const x = e.pageX - skillsSlider.offsetLeft;
+            const walk = (x - startX) * 2; // Velocidad de arrastre
+            skillsSlider.scrollLeft = scrollLeft - walk;
+        });
+        
+        // Eventos para touch
+        skillsSlider.addEventListener('touchstart', (e) => {
+            isDown = true;
+            skillsSlider.classList.add('dragging');
+            startX = e.touches[0].pageX - skillsSlider.offsetLeft;
+            scrollLeft = skillsSlider.scrollLeft;
+            e.preventDefault();
+        });
+        
+        skillsSlider.addEventListener('touchend', () => {
+            isDown = false;
+            skillsSlider.classList.remove('dragging');
+        });
+        
+        skillsSlider.addEventListener('touchmove', (e) => {
+            if (!isDown) return;
+            e.preventDefault();
+            const x = e.touches[0].pageX - skillsSlider.offsetLeft;
+            const walk = (x - startX) * 2; // Velocidad de arrastre
+            skillsSlider.scrollLeft = scrollLeft - walk;
+        });
+    }
+    
     // Animación de aparición al hacer scroll
     const observerOptions = {
         root: null,

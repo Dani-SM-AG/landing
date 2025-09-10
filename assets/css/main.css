@@ -104,7 +104,7 @@ header {
     width: 100%;
     top: 0;
     z-index: 1000;
-    padding: 0 40px; /* Añadimos padding horizontal */
+    padding: 0 40px;
 }
 
 nav {
@@ -118,14 +118,14 @@ nav {
     font-size: 1.5rem;
     font-weight: 700;
     color: var(--azul-profundo);
-    margin-left: 20px; /* Añadimos margen izquierdo */
+    margin-left: 20px;
 }
 
 .nav-links {
     display: flex;
     align-items: center;
     gap: 30px;
-    margin-right: 20px; /* Añadimos margen derecho */
+    margin-right: 20px;
 }
 
 .nav-links a {
@@ -150,7 +150,7 @@ nav {
 
 .translate-btn {
     background-color: var(--lavanda-suave);
-    border-radius: 20px; /* Hacemos el botón más redondeado */
+    border-radius: 20px;
     width: 40px;
     height: 40px;
     display: flex;
@@ -236,6 +236,8 @@ nav {
     overflow: hidden;
     border: 5px solid var(--lavanda-suave);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    object-fit: cover; /* Asegura que la imagen mantenga sus proporciones */
+    width: 300px; /* Aseguramos el ancho igual al alto */
 }
 
 .sobre-mi-content {
@@ -252,11 +254,21 @@ nav {
     overflow: hidden;
     position: relative;
     padding: 20px 0;
+    cursor: grab;
+    user-select: none;
+}
+
+.skills-slider.dragging {
+    cursor: grabbing;
+}
+
+.skills-slider.dragging .skills-track {
+    animation-play-state: paused;
 }
 
 .skills-track {
     display: flex;
-    animation: scroll 30s linear infinite;
+    animation: scroll 20s linear infinite; /* Reducido de 30s a 20s para mayor velocidad */
 }
 
 @keyframes scroll {

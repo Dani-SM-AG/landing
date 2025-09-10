@@ -3,7 +3,7 @@
 /* Tablets */
 @media (max-width: 768px) {
     header {
-        padding: 0 20px; /* Reducimos el padding en tablets */
+        padding: 0 20px;
     }
     
     .logo {
@@ -43,6 +43,9 @@
         flex: 0 0 250px;
         height: 250px;
         margin: 0 auto 30px;
+        border-radius: 50%; /* Aseguramos que siga siendo circular */
+        object-fit: cover; /* Mantiene las proporciones */
+        width: 250px; /* Aseguramos el ancho igual al alto */
     }
     
     .skill-item {
@@ -71,7 +74,7 @@
 /* Móviles */
 @media (max-width: 480px) {
     header {
-        padding: 0 15px; /* Reducimos el padding en móviles */
+        padding: 0 15px;
     }
     
     nav {
@@ -105,8 +108,12 @@
     }
     
     .profile-image {
-        flex: 0 0 200px;
-        height: 200px;
+        flex: 0 0 180px; /* Reducimos el tamaño */
+        height: 180px; /* Igualamos el alto al ancho */
+        margin: 0 auto 30px;
+        border-radius: 50%; /* Aseguramos que sea circular */
+        object-fit: cover; /* Mantiene las proporciones */
+        width: 180px; /* Aseguramos el ancho igual al alto */
     }
     
     .skill-item {
@@ -127,5 +134,16 @@
     
     .copy-example {
         padding: 15px;
+    }
+}
+
+/* Dispositivos muy pequeños (corrección para la foto de perfil) */
+@media (max-width: 320px) {
+    .profile-image {
+        flex: 0 0 150px; /* Tamaño aún más pequeño */
+        height: 150px; /* Igualamos el alto al ancho */
+        width: 150px; /* Aseguramos el ancho igual al alto */
+        border-radius: 50%; /* Aseguramos que sea circular */
+        object-fit: cover; /* Mantiene las proporciones */
     }
 }
